@@ -63,9 +63,9 @@ void _qsort(int *array, unsigned long int lo, unsigned long int hi,
 	if (lo < hi)
 	{
 		p = partition(array, lo, hi, size);
-		_qsort(array, p + 1, hi, size);
 		if (p > 0)
 			_qsort(array, lo, p - 1, size);
+		_qsort(array, p + 1, hi, size);
 	}
 }
 
