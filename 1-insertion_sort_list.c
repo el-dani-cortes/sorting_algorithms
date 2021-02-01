@@ -50,19 +50,22 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *cmp = NULL, *tmp = NULL, *mark = NULL;
 
-	cmp = *list;
-	tmp = cmp->next;
-	while (tmp != NULL)
+	if (*list != NULL)
 	{
-		if (cmp->n > tmp->n)
+		cmp = *list;
+		tmp = cmp->next;
+		while (tmp != NULL)
 		{
-			mark = cmp;
-			_swap(list, cmp, tmp); /*swap nodes*/
-			cmp = mark->prev;
-			tmp = mark;
+			if (cmp->n > tmp->n)
+			{
+				mark = cmp;
+				_swap(list, cmp, tmp); /*swap nodes*/
+				cmp = mark->prev;
+				tmp = mark;
+			}
+			/*Return nodes*/
+			tmp = tmp->next;
+			cmp = cmp->next;
 		}
-		/*Return nodes*/
-		tmp = tmp->next;
-		cmp = cmp->next;
 	}
 }
