@@ -25,17 +25,24 @@ unsigned long int partition(int *array, unsigned long int lo,
 		if (array[j] < pivot)
 		{
 			/*swap values*/
-			tmp = array[i];
-			array[i] = array[j];
-			array[j] = tmp;
+			if (array[j] != array[i])
+			{
+				tmp = array[i];
+				array[i] = array[j];
+				array[j] = tmp;
+				print_array(array, size);
+			}
 			i++;
 		}
 	}
 	/*swap pivot to the i position*/
-	tmp = array[i];
-	array[i] = array[hi];
-	array[hi] = tmp;
-	print_array(array, size);
+	if (array[i] != array[hi])
+	{
+		tmp = array[i];
+		array[i] = array[hi];
+		array[hi] = tmp;
+		print_array(array, size);
+	}
 	return (i);
 }
 
