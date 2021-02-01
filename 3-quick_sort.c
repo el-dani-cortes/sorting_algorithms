@@ -77,5 +77,7 @@ void _qsort(int *array, unsigned long int lo, unsigned long int hi,
  */
 void quick_sort(int *array, size_t size)
 {
+	if (size == 0)
+		return;
 	_qsort(array, 0, size - 1, size);
 }
