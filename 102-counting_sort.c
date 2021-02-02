@@ -10,7 +10,7 @@
 void counting_sort(int *array, size_t size)
 {
 	size_t i;
-	int max, position, _switch = 0, *count = NULL, *order = NULL;
+	int max, position, *count = NULL, *order = NULL;
 
 	if (size == 0 || array == NULL)
 		return;
@@ -18,9 +18,7 @@ void counting_sort(int *array, size_t size)
 	max = array[0];
 	for (i = 0; i < size; i++)
 		if (array[i] > max)
-			max = array[i], _switch = 1;
-	if (_switch == 0)
-		return;
+			max = array[i];
 	/*Use malloc(size of the max value) to create a new array for the count*/
 	count = malloc(sizeof(int) * (max + 1));
 	for (i = 0; i <= (size_t)max; i++)
