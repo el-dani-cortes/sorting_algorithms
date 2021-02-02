@@ -13,8 +13,9 @@ void shell_sort(int *array, size_t size)
 	int value;
 
 	/*Calculate the gap*/
-	while (h < size / 3)
+	while (h < size)
 		h = h * 3 + 1;
+	h = (h - 1) / 3;
 	while (h > 0)
 	{
 		for (j = h; j < size; j++)
@@ -29,6 +30,6 @@ void shell_sort(int *array, size_t size)
 			array[i] =  value;
 		}
 		print_array(array, size);
-		h = (h - 1) / 3;
+		h = h / 3;
 	}
 }
