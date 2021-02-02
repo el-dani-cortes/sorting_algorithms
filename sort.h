@@ -39,4 +39,7 @@ void quick_sort(int *array, size_t size);
 /*Shell sort algorithm*/
 void shell_sort(int *array, size_t size);
 
+/*Counting sort algorithm*/
+void counting_sort(int *array, size_t size);
+
 #endif /* SORT_H */
