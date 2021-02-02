@@ -13,12 +13,12 @@ void counting_sort(int *array, size_t size)
 	int max = 0, position;
 	int *count = NULL, *order = NULL;
 
+	if (size == 0 || array == NULL)
+		return;
 	/*Find the maximun value in the array*/
 	for (i = 0; i < size; i++)
-	{
 		if (array[i] > max)
 			max = array[i];
-	}
 	/*Use malloc(size of the max value) to create a new array for the count*/
 	count = malloc(sizeof(int) * (max + 1));
 	for (i = 0; i <= (size_t)max; i++)
@@ -32,7 +32,7 @@ void counting_sort(int *array, size_t size)
 	/*Sum values in the count array*/
 	for (i = 1; i <= (size_t)max; i++)
 		count[i] = count[i] + count[i - 1];
-	print_array(count, max + 1);
+	print_array(count, (size_t)max + 1);
        /*use malloc(same size of array) to create array to sort the numbers*/
 	order = malloc(sizeof(int) * size);
 	for (i = 0; i < size; i++)
