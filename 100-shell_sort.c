@@ -9,7 +9,7 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	size_t h = 0, i, j;
+	size_t h = 1, i, j;
 	int value;
 
 	/*Calculate the gap*/
