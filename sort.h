@@ -42,4 +42,7 @@ void shell_sort(int *array, size_t size);
 /*Counting sort algorithm*/
 void counting_sort(int *array, size_t size);
 
+/*Counting sort algorithm*/
+void cocktail_sort_list(listint_t **list);
+
 #endif /* SORT_H */
