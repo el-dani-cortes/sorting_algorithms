@@ -33,7 +33,7 @@ void insertion_sort_list(listint_t **list);
 /*Selection sort algorithm*/
 void selection_sort(int *array, size_t size);
 
-/*Quick sort algorithm*/
+/*Quick sort - Lomuto partition scheme*/
 void quick_sort(int *array, size_t size);
 
 /*Shell sort algorithm*/
@@ -44,5 +44,8 @@ void counting_sort(int *array, size_t size);
 
 /*Counting sort algorithm*/
 void cocktail_sort_list(listint_t **list);
+
+/*Quick sort - Hoare Partition scheme */
+void quick_sort_hoare(int *array, size_t size);
 
 #endif /* SORT_H */
