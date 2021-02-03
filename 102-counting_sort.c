@@ -12,7 +12,7 @@ void counting_sort(int *array, size_t size)
 	size_t i;
 	int max, position, *count = NULL, *order = NULL;
 
-	if (size == 0 || array == NULL)
+	if (size < 2 || array == NULL)
 		return;
 	/*Find the maximun value in the array*/
 	max = array[0];
